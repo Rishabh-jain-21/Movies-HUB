@@ -5,7 +5,7 @@ import movieicon from "./film-slate.png"
 const Header = () => {
     return (
         <div>
-            <span className="header"><img src={movieicon} alt="photu" />
+            <span onClick={() => { window.scrollTo(0, 0) }} className="header"><img src={movieicon} alt="photu" />
                 MOVIES-HUB</span>
         </div>
     )

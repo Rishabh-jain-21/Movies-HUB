@@ -1,6 +1,9 @@
+* {
+  scroll-behavior: smooth;
+}
 .App {
   min-height: 100vh;
-  background-color: #6b4f4f;
+  background-color: #eed6c4;
   color: #eed6c4;
   padding-top: 6vw;
   padding-bottom: 70px;
@@ -14,5 +17,20 @@
 @media screen and (max-width: 500px) {
   .App {
     padding-top: 80px;
+  }
+}
+.pageTitle {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2vw;
+  padding: 4px;
+  border-radius: 50px;
+  color: #6b4f4f;
+}
+@media screen and (max-width: 1000px) {
+  .pageTitle {
+    font-size: 6.4vw;
   }
 }

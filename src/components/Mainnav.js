@@ -33,7 +33,7 @@ export default function SimpleBottomNavigation() {
     return (
         <Box sx={{ width: "100%", position: "fixed", bottom: 0 }}>
             <BottomNavigation
-                showLabels
+                // showLabels
                 value={value}
                 onChange={(event, newValue) => {
                     setValue(newValue);
