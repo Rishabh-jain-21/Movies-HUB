@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+.header {
+  width: 100%;
+  cursor: pointer;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  background-color: #483434;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  font-size: 3vw;
+  box-shadow: 0px 1px 5px black;
+  z-index: 100;
+}
+.header img {
+  width: 3vw;
+  padding-right: 20px;
+}
+@media screen and (max-width: 1100px) {
+  .header {
+    font-size: 5vw;
+  }
+  .header img {
+    width: 5vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header {
+    font-size: 7vw;
+    padding: 10px 0px;
+  }
+  .header img {
+    width: 7vw;
+  }
+}
