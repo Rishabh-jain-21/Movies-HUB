@@ -45,7 +45,7 @@ const Search = () => {
                 <Tab style={{ width: "50%" }} label="Search Movies" />
                 <Tab style={{ width: "50%" }} label="Search TV/Series" />
             </Tabs>
-            <div className="trending">
+            <div className="trending" style={{ marginTop: "15px" }}>
                 {
                     content && content.map((elm) => {
                         return <SingleContent key={elm.id} id={elm.id} poster={elm.poster_path} title={elm.title || elm.name} date={elm.first_air_date || elm.release_date} media_type={type ? "tv" : "movie"} rating={elm.vote_average} />
