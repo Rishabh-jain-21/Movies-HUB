@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import CustomPagination from '../../CustomPagination/CustomPagination';
 import SingleContent from '../../SingleContent/SingleContent';
+import useGenres from '../../../Hooks/useGenres';
 import Genres from '../../Genres';
 import "./Movies.css"
 
@@ -14,13 +15,13 @@ const Movies = () => {
     // it is shifted to the another array which contain selected genre , and render them first
     const [genres, setgenres] = useState([]);
     const [selectedgenres, setselectedgenres] = useState([]);
-
+    const genreforURL = useGenres(selectedgenres);
 
     //fetching data
     const fetchMoviesData = async () => {
         //destructuring data from data we get from api
-        const { data } = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}`);
-        // &with_genres=${genreforURL}
+        const { data } = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=${genreforURL}`);
+
         // console.log(data);
         setcontent(data.results);
         setnumberOfPages(data.total_pages);
@@ -29,7 +30,7 @@ const Movies = () => {
     useEffect(() => {
         fetchMoviesData();
         // eslint-disable-next-line
-    }, [page])
+    }, [page, genreforURL])
 
     // component calling/rendering
     return (
