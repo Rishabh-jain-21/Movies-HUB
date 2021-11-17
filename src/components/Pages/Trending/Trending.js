@@ -11,12 +11,13 @@ const Trending = () => {
     const fetchTrendingData = async () => {
         //destructuring data from the fecthed data
         const { data } = await axios.get(`https://api.themoviedb.org/3/trending/all/week?api_key=${process.env.REACT_APP_API_KEY}&page=${page}`);
-        console.log(data.results);
+        // console.log(data.results);
         setcontent(data.results);
     }
 
     useEffect(() => {
         fetchTrendingData();
+        // eslint-disable-next-line
     }, [page]);
     return (
         <div>
@@ -28,7 +29,7 @@ const Trending = () => {
                     })
                 }
             </div>
-            <CustomPagination setpage={setpage} />
+            <CustomPagination count={10} setpage={setpage} />
         </div>
     )
 }

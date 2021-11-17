@@ -11,7 +11,7 @@ const SingleContent = (props) => {
                 <b className="title">{props.title}</b>
                 <span className="sub-title-Container">
                     <span className="sub-title">
-                        {props.media_type === "tv" ? "TV Series" : "Movies"}
+                        {props.media_type === "tv" ? "Series" : "Movies"}
                     </span>
                     <span className="sub-title">{props.date}</span>
                 </span>
