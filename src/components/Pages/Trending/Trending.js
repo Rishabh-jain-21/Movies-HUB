@@ -29,7 +29,7 @@ const Trending = () => {
                     })
                 }
             </div>
-            <CustomPagination count={10} setpage={setpage} />
+            <CustomPagination count={50} setpage={setpage} />
         </div>
     )
 }
