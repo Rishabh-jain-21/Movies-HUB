@@ -26,11 +26,10 @@ const Genres = (props) => {
     }
     useEffect(() => {
         fetchGenres();
-
         return () => {
             props.setgenres({});
-            // eslint-disable-next-line
         };
+        // eslint-disable-next-line
     }, [])
     return (
 

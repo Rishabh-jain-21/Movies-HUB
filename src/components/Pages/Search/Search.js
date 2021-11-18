@@ -27,6 +27,7 @@ const Search = () => {
     useEffect(() => {
         window.scroll(0, 0);
         fetchSearch();
+        // eslint-disable-next-line
     }, [type, page]);
 
     return (
@@ -51,7 +52,7 @@ const Search = () => {
                         return <SingleContent key={elm.id} id={elm.id} poster={elm.poster_path} title={elm.title || elm.name} date={elm.first_air_date || elm.release_date} media_type={type ? "tv" : "movie"} rating={elm.vote_average} />
                     })
                 }
-
+                {searchText && !content && (type ? <h2 style={{ color: "black" }}>No Series Found</h2> : <h2 style={{ color: "black" }}>No Movies Found</h2>)}
             </div>
             {numberofPages > 1 && (<CustomPagination count={numberofPages} setpage={setpage} />)}
         </>
