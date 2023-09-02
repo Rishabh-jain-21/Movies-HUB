@@ -73,9 +73,9 @@ export default function ContentModal({ children, media_type, id }) {
                         {content && <Typography>
                             <div className="ContentModal">
                                 <img className="ContentModal_portrait" src={content.poster_path ? `${img_500}/${content.poster_path}` : unavailable} alt={content.name || content.title} ></img>
-                                {console.log("portraint picture ", content.poster_path)}
+                                {/* {console.log("portraint picture ", content.poster_path)} */}
                                 <img className="ContentModal_landscape" src={content.backdrop_path ? `${img_500}/${content.backdrop_path}` : unavailableLandscape} alt={content.name || content.title} ></img>
-                                {console.log("Landscape picture ", content.backdrop_path)}
+                                {/* {console.log("Landscape picture ", content.backdrop_path)} */}
 
                                 <div className="ContentModal_about">
                                     <span className="ContentModal_title">
