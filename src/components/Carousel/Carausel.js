@@ -10,8 +10,9 @@ const items = [
     <img src="path-to-img" onDragStart={handleDragStart} />,
 ];
 
-const Gallery = () => {
+const Carausel = () => {
     return (
         <AliceCarousel mouseTracking items={items} />
     );
 }
+export default Carausel;

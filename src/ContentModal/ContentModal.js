@@ -11,7 +11,7 @@ import axios from 'axios';
 import { img_500, unavailableLandscape, unavailable } from '../components/Config/Config';
 import { YouTube } from '@material-ui/icons';
 import 'react-alice-carousel/lib/alice-carousel.css';
-
+import Carausel from '../components/Carousel/Carausel';
 
 const style = {
     position: 'absolute',
