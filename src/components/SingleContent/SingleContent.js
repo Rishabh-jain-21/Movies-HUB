@@ -6,7 +6,7 @@ import ContentModal from '../../ContentModal/ContentModal';
 const SingleContent = (props) => {
     return (
         <ContentModal media_type={props.media_type} id={props.id}>
-            <Badge badgeContent={props.rating.toFixed(2)} color={props.rating > 6 ? 'primary' : 'secondary'} />
+            <Badge badgeContent={props.rating?.toFixed(2)} color={props.rating > 6 ? 'primary' : 'secondary'} />
             <img className="poster" src={props.poster ? `${img_300}/${props.poster}` : unavailable} alt={props.title} />
             <span className="bottom-Container">
                 <b className="title">{props.title}</b>
